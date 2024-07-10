@@ -1,0 +1,711 @@
+/* Reset box model and remove default margins/paddings */
+*{
+  margin: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Nav Bar and Head Elements */
+.navbar {
+  background-color: rgb(228, 230, 231);
+  padding: 30px;
+  padding-right: 25px;
+}
+
+.navbar .logo {
+  float: left;
+  margin-left: 60px;
+}
+
+/* Nav Elements */
+.navelements {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar .navelements ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navelements ul li {
+  margin-right: 30px;
+  font-size: 23px;
+}
+
+.navbar .navelements ul li:last-child {
+  margin-right: 0;
+}
+
+.navbar .navelements ul li a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 15px 20px;
+}
+
+/* changes color when cursor is hovered over navbar */
+.navbar .navelements ul li a:hover {
+  color: rgb(4, 173, 4);
+  transition-duration: 0.4s;
+}
+
+/* changes color of active page */
+.navbar .navelements ul li a.active {
+  color: rgb(4, 173, 4);
+}
+
+/* Show the menu icon when the screen is less than 1200px */
+@media screen and (max-width: 1200px) {
+  .menu-icon img {
+    display: block;
+  }
+
+  .navelements nav ul {
+    display: none;
+    /* Hide the menu items by default on mobile */
+  }
+
+  /* Show the menu items in a dropdown when the menu icon is clicked */
+  .navelements.show-menu nav ul {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(228, 230, 231);
+    position: absolute;
+    top: 55px;
+    right: 25px;
+    z-index: 1;
+  }
+
+  .navelements.show-menu nav ul li {
+    margin: 10px;
+  }
+}
+
+.dropdown-menu {
+  display: none;
+}
+
+/* Show the dropdown menu when the menu icon is clicked */
+.navelements.show-menu .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(228, 230, 231);
+  position: absolute;
+  top: 55px;
+  right: 25px;
+  z-index: 1;
+}
+
+/* Hide the menu-icon when the dropdown menu is shown */
+.navelements.show-menu .menu-icon {
+  display: none;
+}
+
+
+
+
+
+
+
+
+/* Search Bar and Elements */
+.searchbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  max-width: 1000px;
+  /* Set a maximum width for the search bar container */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.searchbar .side-by-side {
+  display: flex;
+  align-items: center;
+}
+
+.searchbar img {
+  width: 30px;
+  height: 30px;
+}
+
+.searchbar form input[type="text"] {
+  width: 600px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 7px 0 0 7px;
+  padding: 10px;
+  border: none;
+  background-color: rgb(228, 230, 231);
+}
+
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(4, 173, 4);
+  padding: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 0 7px 7px 0;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .searchbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .searchbar .side-by-side {
+    margin-bottom: 10px;
+  }
+
+  .searchbar form input[type="text"] {
+    width: 90%;
+    max-width: 100%;
+    margin-left: 0;
+    border-radius: 7px;
+  }
+
+  .search-wrapper {
+    border-radius: 7px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .searchbar img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .searchbar form input[type="text"] {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .search-wrapper {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+
+
+
+/* CSS of the Main Content */
+.main-content {
+  margin-top: 60px;
+}
+
+.main-content .maindiv1 {
+  position: relative;
+  text-align: center;
+}
+
+.main-content .maindiv1 img {
+  display: block;
+}
+
+#main-content-img {
+  width: 65.4%;
+}
+
+.main-content .maindiv1 #main-head-1 {
+  font-size: 180px;
+  color: rgb(79, 79, 79);
+  position: absolute;
+  top: 150px;
+  left: 67%;
+  transform: translateX(-50%);
+}
+
+.main-content .maindiv1 #main-head-2 {
+  font-size: 180px;
+  color: rgb(4, 173, 4);
+  position: absolute;
+  top: 330px;
+  left: 68%;
+  transform: translateX(-50%);
+}
+
+.main-content .maindiv1 #main-head-3 {
+  font-size: 22px;
+  position: absolute;
+  top: 530px;
+  left: 20%;
+  width: 90%;
+  text-align: center;
+}
+
+#lineaccross {
+  height: 4px;
+  background-color: black;
+  position: absolute;
+  border: 0px;
+  width: 46%;
+  margin-left: 45%;
+  top: 75%;
+}
+
+.main-content #side-img {
+  display: block;
+  position: absolute;
+  margin: 10px auto;
+  background-color: rgb(80, 80, 80);
+  border-radius: 7px;
+  padding: 2px;
+  padding-left: 40px;
+  padding-right: 40px;
+  left: 62%;
+  bottom: -1.3%;
+}
+
+/* Media queries */
+@media only screen and (m-width: 1024px) {
+  .main-content .maindiv1 #main-head-1 {
+    font-size: 100px;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .main-content .maindiv1 #main-head-2 {
+    font-size: 100px;
+    top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .main-content .maindiv1 #main-head-3 {
+    font-size: 18px;
+    top: 480px;
+  }
+
+  #lineaccross {
+    width: 36%;
+    left: 32%;
+  }
+
+  .main-content #side-img {
+    padding-left: 20px;
+    padding-right: 20px;
+    left: 56%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content .maindiv1 #main-head-1 {
+    font-size: 60px;
+    top: -20px;
+  }
+
+  .main-content .maindiv1 #main-head-2 {
+    font-size: 60px;
+    top: 80px;
+  }
+
+  .main-content .maindiv1 #main-head-3 {
+    font-size: 16px;
+    top: 450px;
+  }
+
+  #lineaccross {
+    width: 30%;
+    left: 35%;
+  }
+
+  .main-content #side-img {
+    padding-left: 10px;
+    padding-right: 10px;
+    left: 52%;
+  }
+}
+
+
+
+
+/* OUR SERVICES SECTION */
+#headingservices {
+  color: rgb(79, 79, 79);
+  text-align: center;
+  margin-top: 80px;
+  font-size: 40px;
+}
+
+/* Style the main container */
+.center-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Style the container for the three divs */
+.main-container {
+  display: flex;
+  /* Add this to make the three divs appear side by side */
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  /* Cover 90% of the width of the parent container */
+}
+
+/* Style the box divs */
+.box {
+  flex: 1 0 30%;
+  /* Each box will cover 30% of the width */
+  max-width: 30%;
+  height: 200px;
+  margin: 10px;
+  background-color: rgb(228, 230, 231);
+  text-align: center;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Style the icon div inside each box */
+.icon {
+  padding: 10px;
+}
+
+/* Style the description text inside each box */
+.description {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  color: rgb(79, 79, 79);
+  margin-top: 15px;
+}
+
+/* Style the icon images inside each box */
+.box img {
+  width: 100px;
+  height: auto;
+  margin: auto;
+}
+
+
+
+
+
+/* VALUE FOR MONEY SECTION */
+/* Style the center container */
+.value-center-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Style the main image container */
+.image-container {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  /* Set the main div to cover 90% of the website */
+  max-width: 1200px;
+  /* Optional: Add a max-width to limit the width on larger screens */
+  flex-wrap: wrap;
+}
+
+/* Style the image wrappers */
+.image-wrapper {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Style the images */
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Style the name overlay */
+.name-overlay1,
+.name-overlay2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+}
+
+/* Style the gap between the images */
+.image-gap {
+  flex-basis: 5%;
+}
+
+/* Set the width of the first and fourth images */
+.image1,
+.image4 {
+  flex-basis: 50%;
+}
+
+/* Set the width of the second and third images */
+.image2,
+.image3 {
+  flex-basis: 30%;
+}
+
+/* Media query for responsive layout */
+@media screen and (max-width: 768px) {
+
+  /* Stack the images on top of each other for smaller screens */
+  .image-wrapper {
+    flex-basis: 100%;
+  }
+
+  /* Reset the width of the first and fourth images */
+  .image1,
+  .image4 {
+    flex-basis: 100%;
+  }
+
+  /* Reset the width of the second and third images */
+  .image2,
+  .image3 {
+    flex-basis: 100%;
+  }
+}
+
+
+
+
+
+
+/* Style the round image main container */
+.roundimage-main-container {
+  display: flex;
+  margin-top: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the container of round images */
+.roundimage-container {
+  display: flex;
+  flex-wrap: nowrap;
+  /* Prevent wrapping of the boxes to stay in the same line */
+  justify-content: center;
+  /* Horizontally center the boxes */
+  width: 90%;
+  /* Each round image box covers 90% of the available width */
+}
+
+/* Style each round image box */
+.roundbox {
+  flex: 0 0 12%;
+  /* Each roundbox takes 12% of the available width (90% / 7 roundboxes) */
+  text-align: center;
+  margin: 10px;
+}
+
+/* Style the rounded images */
+.rounded-image {
+  border-radius: 50%;
+  width: 100px;
+  /* You can adjust the width and height here if needed */
+  height: 100px;
+  object-fit: cover;
+}
+
+/* Style the image headings */
+.image-heading {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  margin-top: 15px;
+  color: rgb(79, 79, 79);
+}
+
+
+
+
+
+
+
+
+
+/* Style the bottom main container */
+.bottom-main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgb(248, 240, 232);
+  margin-top: 40px;
+}
+
+/* Style the inner divs */
+.bottom-box {
+  flex: 1;
+  text-align: center;
+  margin: 10px;
+}
+
+/* Style the bottom box images */
+.bottom-box img {
+  height: 50px;
+  width: 50px;
+}
+
+/* Style the lists */
+.bottom-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.bottom-box li {
+  margin: 20px 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the bottom icons */
+.bottom-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.bottom-icons img {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+
+/* Style the copyright */
+.copyright {
+  background-color: rgb(190, 191, 192);
+  text-align: center;
+  padding: 1px;
+}
+
+/* Media query for small devices (e.g., smartphones) */
+@media only screen and (max-width: 768px) {
+
+  /* Nav Elements */
+  .navelements {
+    display: none;
+  }
+
+  .navbar .navelements ul {
+    display: block;
+  }
+
+  .navbar .navelements ul li {
+    text-align: center;
+    margin: 5px;
+  }
+
+  /* Search Bar and Elements */
+  .searchbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .searchbar form input[type="text"] {
+    width: 80%;
+  }
+
+  .search-wrapper {
+    margin-top: -30px;
+  }
+
+  /* Main Content */
+  .main-content .maindiv1 #main-head-1 {
+    font-size: 100px;
+    left: 50%;
+    top: 50px;
+    transform: translateX(-50%);
+  }
+
+  .main-content .maindiv1 #main-head-2 {
+    font-size: 100px;
+    left: 50%;
+    top: 110px;
+    transform: translateX(-50%);
+  }
+
+  .main-content .maindiv1 #main-head-3 {
+    font-size: 18px;
+    top: 280px;
+    left: 5%;
+    width: 90%;
+  }
+
+  .main-content #mainimg {
+    margin: 10px auto;
+  }
+
+  /* Value for Money Section */
+  .center-container .main-container {
+    flex-wrap: wrap;
+  }
+
+  .box {
+    flex-basis: calc(50% - 30px);
+    margin: 10px;
+  }
+
+  /* Value for Money Images */
+  .center-container .image-container {
+    flex-direction: column;
+  }
+
+  .image-wrapper {
+    width: 100%;
+  }
+
+  .name-overlay1,
+  .name-overlay2 {
+    font-size: 16px;
+  }
+
+  /* Round Image Containers */
+  .roundimage-main-container .roundimage-container {
+    flex-wrap: wrap;
+  }
+
+  .roundbox {
+    flex-basis: calc(33.33% - 30px);
+    margin: 10px;
+  }
+
+  /* Bottom Main Container */
+  .bottom-main-container {
+    flex-direction: column;
+  }
+
+  .bottom-box {
+    margin: 20px 0;
+  }
+
+  /* Bottom Icons */
+  .bottom-icons {
+    justify-content: center;
+  }
+}
+
+/* Media query for medium devices (e.g., tablets) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Add any specific styles for medium devices if needed */
+}
+
+/* Media query for large devices (e.g., laptops and desktops) */
+@media only screen and (min-width: 1024px) {
+  /* Add any specific styles for large devices if needed */
+}

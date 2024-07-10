@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../javascript/script.js" defer></script>
+    <title>Shop</title>
+    <style>
+        @media screen and (max-width: 1000px) {
+            .main-content {
+                flex-wrap: wrap;
+            }
+
+            .image,
+            .details {
+                flex-basis: 100%;
+                text-align: center;
+            }
+
+            .image img {
+                width: 40%;
+                height: auto;
+                margin-left: 0;
+                margin-top: 20px;
+            }
+
+            .options .size button {
+                margin-right: 10px;
+            }
+
+            .quantity .cart,
+            .buy-now {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .options h2 {
+                padding-top: 10px;
+            }
+
+            .other-option {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .plant-options h6 {
+                margin: 0;
+            }
+
+            .plant-options .next {
+                color: black;
+                background-color: #D9D9D9;
+                padding: 10px;
+                text-decoration: none;
+                border-radius: 50%;
+            }
+
+            .plant-options {
+                flex-basis: 45%;
+                text-align: center;
+            }
+
+            .image-selector {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .left-side,
+            .right-side {
+                flex-basis: 100%;
+                text-align: center;
+            }
+
+            .left-side a {
+                margin: 10px;
+            }
+
+            .left-side img {
+                width: 60px;
+                height: 60px;
+                padding: 10px;
+            }
+
+            .right-side h2 {
+                padding-top: 10px;
+            }
+
+            .image-container {
+                padding: 0 20px;
+                /* Reduce padding for smaller screens */
+            }
+
+            .image-container-left,
+            .image-container-right {
+                margin: 10px;
+                /* Add margin between containers for smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--Nav Bar and Head Elements-->
+    <div class="navbar">
+        <div class="logo">
+            <a href="../homepage.html"><img src="../images/homepage/logo.png"></a>
+        </div>
+        <div class="navelements" id="navelements">
+            <nav>
+                <ul id="nav1">
+                    <li><a href="../homepage.html">Home</a></li>
+                    <li><a class="active" href="shop.html">Shop</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <div class="menu-icon" id="menu-icon">
+                        <img src="../images/homepage/menu.png" style="cursor:pointer;">
+                    </div>
+                </ul>
+            </nav>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu">
+            <ul>
+                <li><a href="../homepage.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Search Bar and Elements-->
+    <div class="searchbar">
+        <div class="side-by-side">
+            <a href="cart.html"><img src="../images/cart.png" style="cursor:pointer;"></a>
+            <img src="../images/user.png" style="margin-left:40px;cursor:pointer;">
+        </div>
+        <div class="side-by-side">
+            <form>
+                <input type="text" placeholder="What are you looking for?" style="margin-left:200px;">
+            </form>
+        </div>
+        <div class="search-wrapper" style="cursor:pointer;">
+            <img class="search" src="../images/search.png" style="cursor:pointer;">
+        </div>
+        <div class="side-by-side">
+            <img src="../images/support.png" style="margin-left:180px;">
+        </div>
+        <div class="side-by-side">
+            <a href="support.html" style="text-decoration:none;color:rgb(148, 149, 149)">
+                <p>Expert Support <br> 24/7 Online</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main content of webpage -->
+    <div class="main-content">
+        <div class="image">
+            <img src="../images/shop/Aloe Vera.png">
+        </div>
+        <div class="details">
+            <h2>Aloe Vera</h2>
+            <div class="price">
+                <h4><s>$ 70</s></h4>
+                <h3>$ 50</h3>
+            </div>
+            <div class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <h5>20 reviews</h5>
+            </div>
+            <div class="options">
+                <h4>Select Plant Size</h4>
+                <div class="size">
+                    <button>S</button>
+                    <button>XL</button>
+                    <button>L</button>
+                    <button>XXL</button>
+                </div>
+                <div class="quantity">
+                    <button class="button">+</button>
+                    <span>1</span>
+                    <button class="button">−</button>
+                    <button class="cart" id="openButton" style="cursor:pointer;">Add To Cart</button>
+                </div>
+                <button class="buy-now">Buy Now</button>
+                <h2>Goes well with</h2>
+                <div class="other-option">
+                    <div class="plant-options">
+                        <img src="../images/shop/botanic tree.png">
+                        <h6>Botanic Tree</h6>
+                    </div>
+                    <div class="plant-options">
+                        <img src="../images/shop/Money Plant.png">
+                        <h6>Money Plant</h6>
+                    </div>
+                    <div class="plant-options">
+                        <a href="#" class="next">&#9654</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('openButton').addEventListener('click', function () {
+            window.location.href = 'cart.html';
+        });
+    </script>
+
+    <div class="image-selector">
+        <div class="left-side">
+            <a href="#" class="next">&#9654</a>
+            <img src="../images/shop/firstslide.png">
+            <img src="../images/shop/secondslide.png">
+            <img src="../images/shop/thirdslide.png">
+            <img src="../images/shop/fourthslide.png">
+            <img src="../images/shop/fifthslide.png">
+            <img src="../images/shop/sixthslide.png">
+            <a href="#" class="next">&#9654</a>
+        </div>
+        <div class="right-side">
+            <h2>Share This Product</h2>
+            <img src="../images/fblogo.png">
+            <img src="../images/instalogo.png">
+            <img src="../images/twitterlogo.png">
+            <img src="../images/pinterestlogo.png">
+        </div>
+
+    </div>
+
+    <div class="indoor-collection">
+        <h1>Indoor Collection</h1>
+        <div class="image-container">
+            <div class="column-1">
+                <img src="../images/shop/Spider Plant.png">
+                <img src="../images/shop/Jade Plant.png">
+                <img src="../images/shop/Philodendron.png">
+            </div>
+            <div class="column-2">
+                <img src="../images/shop/Peace Lily.png">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="user-review">
+        <h1>User Reviews</h1>
+        <div class="row">
+            <a href="#" class="next">&#9654</a>
+            <div class="col-1">
+                <div class="box-1">
+                    <h3>"The Plant Was Awesome & The Vase Is Really Solid"</h3>
+                    <br>
+                </div>
+                <div class="box-2">
+                    <div class="box-2-content">
+                        <img src="../images/shop/suraj.png">
+                        <div class="box-2-info">
+                            <h4>Suraj Bam</h4>
+                            <div class="star-ratings">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="box-1">
+                    <h3>“The Support team were really co-operative, would love to visit again”</h3>
+                </div>
+                <br>
+                <div class="box-2">
+                    <div class="box-2-content">
+                        <img src="../images/shop/Anil.png">
+                        <div class="box-2-info">
+                            <h4>Anil Thapa</h4>
+                            <div class="star-ratings">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="box-1">
+                    <h3>"This Shop Offers So Many Discounts & Coupons And Provide Quality Products"</h3>
+                </div>
+                <div class="box-2">
+                    <div class="box-2-content">
+                        <img src="../images/shop/Ajay.png">
+                        <div class="box-2-info">
+                            <h4>Ajay Sunuwar</h4>
+                            <div class="star-ratings">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="next">&#9654</a>
+        </div>
+    </div>
+    <div class="footer">
+        <h4>&copy;copyright Ankit</h4>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+*{
+  margin: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    font-family: "Arial";
+  }
+  
+  /* Nav Bar and Head Elements */
+  .navbar {
+    background-color: rgb(228, 230, 231);
+    padding: 30px;
+    padding-right: 25px;
+  }
+  
+  .navbar .logo {
+    float: left;
+    margin-left: 60px;
+  }
+  
+  /* Nav Elements */
+  .navelements {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .navbar .navelements ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar .navelements ul li {
+    margin-right: 30px;
+    font-size: 23px;
+  }
+  
+  .navbar .navelements ul li:last-child {
+    margin-right: 0;
+  }
+  
+  .navbar .navelements ul li a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 15px 20px;
+  }
+  
+  /* changes color when cursor is hovered over navbar */
+  .navbar .navelements ul li a:hover {
+    color: rgb(4, 173, 4);
+    transition-duration: 0.4s;
+  }
+  
+  /* changes color of active page */
+  .navbar .navelements ul li a.active {
+    color: rgb(4, 173, 4);
+  }
+  
+  /* Show the menu icon when the screen is less than 1200px */
+  @media screen and (max-width: 1200px) {
+    .menu-icon img {
+      display: block;
+    }
+  
+    .navelements nav ul {
+      display: none;
+      /* Hide the menu items by default on mobile */
+    }
+  
+    /* Show the menu items in a dropdown when the menu icon is clicked */
+    .navelements.show-menu nav ul {
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(228, 230, 231);
+      position: absolute;
+      top: 55px;
+      right: 25px;
+      z-index: 1;
+    }
+  
+    .navelements.show-menu nav ul li {
+      margin: 10px;
+    }
+  }
+  
+  .dropdown-menu {
+    display: none;
+  }
+  
+  /* Show the dropdown menu when the menu icon is clicked */
+  .navelements.show-menu .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(228, 230, 231);
+    position: absolute;
+    top: 55px;
+    right: 25px;
+    z-index: 1;
+  }
+  
+  /* Hide the menu-icon when the dropdown menu is shown */
+  .navelements.show-menu .menu-icon {
+    display: none;
+  }
+
+  /*Css for main-content*/
+
+.main-content .background img {
+  width: 100%;
+  height: auto;
+}
+
+.row {
+  display: flex;
+  padding: 70px;
+}
+
+.col-1 {
+  flex-basis: 20%;
+}
+
+.col-2 {
+  flex-basis: 60%;
+
+}
+
+.col-2 h3 {
+  font-size: 24px;
+  line-height: 28px;
+  color: #727272;
+}
+
+.col-2 h1 {
+  font-size: 62px;
+  color: #505050;
+  line-height: 73px;
+}
+
+.col-2 {
+  font-size: 24px;
+  line-height: 28px;
+  color: #505050;
+}
+
+.row .col-1 h2 {
+  font-size: 16px;
+  line-height: 16px;
+  margin-bottom: 20px;
+  color: #505050;
+  font-weight: 500;
+}
+
+.row .col-1 img {
+  padding: 0 3px;
+}
+
+.row .col-2 p {
+  padding: 20px 0px;
+}
+
+.main-content .button button {
+  background-color: #FF7A7A;
+  color: #F8F8F8;
+  height: 56px;
+  width: 200px;
+  border: none;
+  font-size: 20px;
+}
+
+.main-content .button {
+  text-align: center;
+}
+
+.footer {
+  background-color: #DCDCDC;
+  height: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.footer h4 {
+  font-size: 14px;
+  line-height: 25.2px;
+  margin-top: 100px;
+  padding-top: 10px;
+  font-weight: 400;
+}

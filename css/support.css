@@ -1,0 +1,328 @@
+/* Reset box model and remove default margins/paddings */
+* {
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Nav Bar and Head Elements */
+.navbar {
+    background-color: rgb(228, 230, 231);
+    padding: 30px;
+    padding-right: 25px;
+}
+
+.navbar .logo {
+    float: left;
+    margin-left: 60px;
+}
+
+/* Nav Elements */
+.navelements {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar .navelements ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .navelements ul li {
+    margin-right: 30px;
+    font-size: 23px;
+}
+
+.navbar .navelements ul li:last-child {
+    margin-right: 0;
+}
+
+.navbar .navelements ul li a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+/* changes color when cursor is hovered over navbar */
+.navbar .navelements ul li a:hover {
+    color: rgb(4, 173, 4);
+    transition-duration: 0.4s;
+}
+
+/* changes color of active page */
+.navbar .navelements ul li a.active {
+    color: rgb(4, 173, 4);
+}
+
+/* Show the menu icon when the screen is less than 1200px */
+@media screen and (max-width: 1200px) {
+    .menu-icon img {
+        display: block;
+    }
+
+    .navelements nav ul {
+        display: none;
+        /* Hide the menu items by default on mobile */
+    }
+
+    /* Show the menu items in a dropdown when the menu icon is clicked */
+    .navelements.show-menu nav ul {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(228, 230, 231);
+        position: absolute;
+        top: 55px;
+        right: 25px;
+        z-index: 1;
+    }
+
+    .navelements.show-menu nav ul li {
+        margin: 10px;
+    }
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+/* Show the dropdown menu when the menu icon is clicked */
+.navelements.show-menu .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(228, 230, 231);
+    position: absolute;
+    top: 55px;
+    right: 25px;
+    z-index: 1;
+}
+
+/* Hide the menu-icon when the dropdown menu is shown */
+.navelements.show-menu .menu-icon {
+    display: none;
+}
+
+
+.navbar a h2 {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    position: absolute;
+    left: 14%;
+    top: 2%;
+    color: rgb(4, 173, 4);
+    padding-top: 35px;
+}
+
+/* CSS OF MAIN CONTENT STARTS HERE*/
+.main-content {
+    background-image: url(../images/support/support\ background.png);
+    color: white;
+    height: 600px;
+    padding: 1px;
+}
+
+.main-content h1 {
+    font-size: 48px;
+    text-align: center;
+    margin-top: 200px;
+}
+
+
+/* Search Bar  */
+/* Styling for the search bar container */
+.searchbar {
+    display: flex;
+    align-items: center;
+    border: 0px;
+    ;
+    border-radius: 5px;
+    padding: 10px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+/* Styling for the search input */
+.searchbar input[type="text"] {
+    flex: 1;
+    height: 40px;
+    font-size: 18px;
+    padding: 11px;
+    border: none;
+    outline: none;
+    border-radius: 7px 0 0 7px;
+    background-color: #f1f1f1;
+}
+
+/* Styling for the search button container */
+.search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 0 7px 7px 0;
+    padding: 11px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #dbdfdb;
+    /* Green background color for the search button */
+    cursor: pointer;
+}
+
+/* Styling for the search button image */
+.search-button img {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+/* CSS of the browse articles and submit ticket */
+.main-div {
+    display: flex;
+    justify-content: center;
+    margin-top: -80px;
+}
+
+/* Increase the gap between the two divs */
+.ticket-article-gap {
+    flex: 0 0 2%;
+}
+
+/* Style for the individual boxes */
+.box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 7px;
+    padding: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 10px;
+    background-color: white;
+}
+
+/* Style for the images */
+.box img {
+    object-fit: cover;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+/* Style for the content (heading and description) */
+.box .content {
+    display: flex;
+    flex-direction: column;
+}
+
+.heading {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(99, 99, 99);
+}
+
+.description {
+    margin-top: 10px;
+    color: rgb(99, 99, 99);
+}
+
+
+
+.view-articles {
+    color: rgb(99, 99, 99);
+    text-align: center;
+    margin-top: 70px;
+}
+
+.view-articles h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+.view-articles a {
+    text-decoration: none;
+    color: rgb(4, 173, 4);
+    font-size: 20px;
+}
+
+
+
+
+
+/* Center the main div */
+.general-pay {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+/* Style for the individual boxes */
+.sub-general-pay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    padding: 89px;
+    padding-left: 130px;
+    padding-right: 130px;
+    margin: 5px;
+    background-color: white;
+}
+
+/* Style for the images */
+.sub-general-pay img {
+    width: 90px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 20%;
+    display: block;
+    margin-top: 15px;
+}
+
+/* Style for the headings */
+.sub-general-pay h3 {
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(99, 99, 99);
+}
+
+/* Increase the gap between the two divs */
+.general-pay-gap {
+    flex: 0 0 5%;
+}
+
+
+
+#bottom-quote {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    margin-top: -80px;
+    color: white;
+}
+
+.last {
+    padding: 10px;
+    background-color: #12344D;
+    margin-top: 100px;
+}
+
+#last {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}

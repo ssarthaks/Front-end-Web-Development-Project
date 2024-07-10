@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cart.css">
+    <script src="../javascript/script.js" defer></script>
+    <title>Cart</title>
+    <style>
+        @media screen and (max-width: 767px) {
+            .row {
+                flex-direction: column;
+            }
+            .col-1,
+            .col-2 {
+                flex-basis: 100%;
+            }
+            .row .col-1 img {
+                width: 100%;
+            }
+            .col-1 .section-2 h2 {
+                font-size: 24px;
+            }
+            .col-1 .section-2 h3,
+            .col-1 .section-2 h4 {
+                font-size: 18px;
+            }
+            .col-1 .section-3 {
+                align-items: center;
+                flex-direction: row;
+            }
+            .col-1 .section-3 img {
+                margin-right: 10px;
+            }
+            .col-2 button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--Nav Bar and Head Elements-->
+    <div class="navbar">
+        <div class="logo">
+          <a href="../homepage.html"><img src="../images/logo.png"></a>
+        </div>
+        <div class="navelements" id="navelements">
+          <nav>
+            <ul id="nav1">
+              <li><a href="../homepage.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="support.html">Support</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <div class="menu-icon" id="menu-icon">
+                <img src="../images/menu.png" style="cursor:pointer;">
+              </div>
+            </ul>
+          </nav>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu">
+          <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="html/shop.html">Shop</a></li>
+            <li><a href="html/support.html">Support</a></li>
+            <li><a href="html/blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+    
+    
+      <!--Search Bar and Elements-->
+      <div class="searchbar">
+        <div class="side-by-side">
+          <a href="cart.html"><img src="../images/cart.png" style="cursor:pointer;"></a>
+          <img src="../images/user.png" style="margin-left:40px;cursor:pointer;">
+        </div>
+        <div class="side-by-side">
+          <form>
+            <input type="text" placeholder="What are you looking for?" style="margin-left:200px;">
+          </form>
+        </div>
+        <div class="search-wrapper" style="cursor:pointer;">
+          <img class="search" src="../images/search.png" style="cursor:pointer;">
+        </div>
+        <div class="side-by-side">
+          <img src="../images/support.png" style="margin-left:180px;">
+        </div>
+        <div class="side-by-side">
+          <a href="support.html" style="text-decoration:none;color:rgb(148, 149, 149)">
+            <p>Expert Support <br> 24/7 Online</p>
+          </a>
+        </div>
+      </div>
+
+    <!--Cart-->
+    <div class="main-container">
+        <h1>Your Cart</h1>
+        <div class="row">
+            <div class="col-1">
+                <div class="section-1">
+                    <img src="../images/cart/Aloe Vera.png">
+                </div>
+                <div class="section-2">
+                    <h2>Aloe Vera</h2>
+                    <h3><s>$ 70</s></h3>
+                    <h4>$ 50</h4>
+                </div>
+                <div class="section-3">
+                    <div class="delete">
+                        <img src="../images/trash.png">
+                    </div>
+                    <div class="quantity">
+                        <button class="button">+</button>
+                        <span>1</span>
+                        <button class="button">−</button> 
+                    </div>   
+                </div>
+            </div>
+            <div class="col-2">
+                <h1>Order Summary</h1>
+                <div class="charges">
+                    <h2>Subtotal (1 Items) </h2>
+                    <h3>$ 50</h3>
+                </div>
+                <div class="charges">
+                    <h2>Delivery Charge</h2>
+                    <h3>$ 20</h3>
+                </div>
+                <div class="charges">
+                    <h2>Total   </h2>
+                    <h3>$ 70</h3>
+                </div>
+                <div class="order">
+                    <button>Confirm Order</button>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <div class="discount-section">
+        <h2>Apply discount or gift codes on checkout screen</h2>
+        <h2>Extra 30% Off ( upto $20 ) on checkout after login Today.</h2>
+        <a href="shop.html">Continue Shopping ></a>
+    </div>
+    <!--Footer-->
+    <div class="footer">
+        <div class="bottom-main-container">
+            <div class="bottom-box">
+              <img src="../images/homepage/logo.png" alt="Image">
+              <ul>
+                <li>Gardening</li>
+                <li>Soil & Fertilizers</li>
+                <li>Seeds</li>
+                <li>Pebbles & Plants</li>
+                <li>Accessories</li>
+              </ul>
+            </div>
+            <div class="bottom-box">
+              <h2 style="font-family: Arial, Helvetica, sans-serif;">Our links</h2>
+              <ul>
+                <li>Help and support</li>
+                <li>Contact info</li>
+                <li>Term and condition</li>
+                <li>Specials</li>
+                <li>Help and support</li>
+              </ul>
+            </div>
+            <div class="bottom-box">
+              <ul>
+                <h2 style="font-family: Arial, Helvetica, sans-serif;">Our Services</h2>
+                <li>Home delivery</li>
+                <li>24 hrs support</li>
+                <li>Cash back</li>
+                <li>Privacy Policy</li>
+                <li>Your account</li>
+              </ul>
+            </div>
+            <div class="bottom-box">
+              <h2 style="font-family: Arial, Helvetica, sans-serif;">Follow Us on</h2>
+              <div class="bottom-icons">
+                <!-- Add your icons here -->
+                <img src="../images/fblogo.png" alt="Icon 1">
+                <img src="../images/instalogo.png" alt="Icon 2">
+                <img src="../images/pinterestlogo.png" alt="Icon 3">
+                <img src="../images/twitterlogo.png" alt="Icon 4">
+              </div>
+            </div>
+          </div>
+    </div>
+    <!--Copyright-->
+    <div class="copyright">
+        <h4>&copy;copyright Ankit</h4>
+    </div>
